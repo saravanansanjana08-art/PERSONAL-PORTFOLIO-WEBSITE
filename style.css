@@ -1,0 +1,1881 @@
+/* =========================================================
+   ☁️🌸 WHIMSICAL DREAMCORE PORTFOLIO 🌸☁️
+   Cute • Dreamy • Animated • Full Homepage
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fffaff;
+    color: #665f7d;
+    line-height: 1.8;
+    overflow-x: hidden;
+    font-size: 17px;
+}
+
+/* =========================================================
+   🎀 NAVBAR
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 250, 255, 0.88);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 2px solid #e8dafa;
+
+    box-shadow:
+        0 5px 25px rgba(150, 130, 190, 0.12);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+}
+
+.logo {
+    font-size: 30px;
+    color: #9c7bbd;
+    font-weight: bold;
+
+    transition: 0.4s;
+}
+
+.logo::before {
+    content: "🎀 ";
+}
+
+.logo:hover {
+    transform:
+        rotate(-5deg)
+        scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #716982;
+
+    font-weight: bold;
+    font-size: 17px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9b78bd;
+
+    transform:
+        translateY(-4px);
+}
+
+.nav-links a::after {
+    content: "♡";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -20px;
+
+    transform: translateX(-50%);
+
+    color: #d6a9dc;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    opacity: 1;
+    bottom: -14px;
+}
+
+/* =========================================================
+   🌸 FLOATING DECORATIONS
+   ========================================================= */
+
+.decor {
+    position: fixed;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    z-index: 10;
+}
+
+/* butterflies */
+
+.butterfly-one {
+    left: 4%;
+    top: 25%;
+
+    font-size: 38px;
+
+    animation:
+        butterflyFly 6s ease-in-out infinite;
+}
+
+.butterfly-two {
+    right: 7%;
+    top: 55%;
+
+    font-size: 34px;
+
+    animation:
+        butterflyFly 7s ease-in-out infinite reverse;
+}
+
+/* cats */
+
+.cat-one {
+    right: 4%;
+    top: 22%;
+
+    font-size: 42px;
+
+    animation:
+        catFloat 4s ease-in-out infinite;
+}
+
+.cat-two {
+    left: 5%;
+    bottom: 15%;
+
+    font-size: 35px;
+
+    animation:
+        catFloat 5s ease-in-out infinite reverse;
+}
+
+/* pandas */
+
+.panda-one {
+    left: 2%;
+    top: 65%;
+
+    font-size: 42px;
+
+    animation:
+        pandaFloat 5s ease-in-out infinite;
+}
+
+.panda-two {
+    right: 3%;
+    bottom: 10%;
+
+    font-size: 36px;
+
+    animation:
+        pandaFloat 6s ease-in-out infinite reverse;
+}
+
+/* hearts */
+
+.heart-one {
+    left: 18%;
+    top: 15%;
+
+    font-size: 27px;
+
+    animation:
+        heartFloat 4s ease-in-out infinite;
+}
+
+.heart-two {
+    right: 20%;
+    top: 35%;
+
+    font-size: 24px;
+
+    animation:
+        heartFloat 5s ease-in-out infinite reverse;
+}
+
+.heart-three {
+    left: 30%;
+    bottom: 10%;
+
+    font-size: 22px;
+
+    animation:
+        heartFloat 4.5s ease-in-out infinite;
+}
+
+/* stars */
+
+.star-one {
+    left: 8%;
+    top: 48%;
+
+    color: #b9a5dd;
+
+    font-size: 28px;
+
+    animation:
+        twinkle 2s ease-in-out infinite;
+}
+
+.star-two {
+    right: 9%;
+    top: 42%;
+
+    color: #a8c9e6;
+
+    font-size: 25px;
+
+    animation:
+        twinkle 2.5s ease-in-out infinite;
+}
+
+.star-three {
+    left: 25%;
+    top: 75%;
+
+    color: #d9a9d9;
+
+    font-size: 20px;
+
+    animation:
+        twinkle 3s ease-in-out infinite;
+}
+
+/* =========================================================
+   ☁️ HERO / HOME
+   ========================================================= */
+
+.hero {
+    min-height: 94vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 20%,
+            #f8d9eb 0%,
+            transparent 27%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            #dcd4f6 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 20% 90%,
+            #d7eef3 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 85%,
+            #f6e0c9 0%,
+            transparent 28%
+        ),
+
+        #fffaff;
+}
+
+/* glowing circles */
+
+.hero .glow-one,
+.hero .glow-two,
+.hero .glow-three {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(3px);
+
+    pointer-events: none;
+}
+
+.glow-one {
+    width: 180px;
+    height: 180px;
+
+    background: rgba(238, 204, 244, 0.35);
+
+    top: 10%;
+    left: 25%;
+
+    animation:
+        glowMove 7s ease-in-out infinite;
+}
+
+.glow-two {
+    width: 230px;
+    height: 230px;
+
+    background: rgba(194, 224, 243, 0.3);
+
+    bottom: 5%;
+    right: 20%;
+
+    animation:
+        glowMove 9s ease-in-out infinite reverse;
+}
+
+.glow-three {
+    width: 130px;
+    height: 130px;
+
+    background: rgba(248, 210, 229, 0.35);
+
+    top: 45%;
+    left: 5%;
+
+    animation:
+        glowMove 6s ease-in-out infinite;
+}
+
+/* =========================================================
+   🌙 MOON
+   ========================================================= */
+
+.moon {
+    position: absolute;
+
+    right: 12%;
+    top: 12%;
+
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5cf,
+            #f7dfb1
+        );
+
+    box-shadow:
+        0 0 35px
+        rgba(247, 220, 174, 0.6);
+
+    animation:
+        moonFloat 5s ease-in-out infinite;
+}
+
+.moon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #eed39e;
+
+    top: 23px;
+    left: 25px;
+}
+
+.moon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #eed39e;
+
+    bottom: 25px;
+    right: 25px;
+}
+
+/* =========================================================
+   ☁️ CLOUDS
+   ========================================================= */
+
+.cloud {
+    position: absolute;
+
+    font-size: 60px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+    animation:
+        cloudMove 18s linear infinite;
+}
+
+.cloud-one {
+    top: 18%;
+    left: -10%;
+}
+
+.cloud-two {
+    top: 68%;
+    left: -20%;
+
+    font-size: 48px;
+
+    animation-duration: 23s;
+    animation-delay: 4s;
+}
+
+.cloud-three {
+    top: 38%;
+    left: -15%;
+
+    font-size: 40px;
+
+    animation-duration: 27s;
+    animation-delay: 8s;
+}
+
+/* =========================================================
+   ✨ HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 20;
+
+    animation:
+        heroAppear 1.3s ease;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.7);
+
+    border:
+        2px solid #e2d3f0;
+
+    color: #9a7bb7;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px
+        rgba(155, 130, 190, 0.12);
+
+    animation:
+        badgeFloat 3s ease-in-out infinite;
+}
+
+.intro {
+    color: #b47fba;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: 76px;
+
+    color: #9071b3;
+
+    margin: 8px 0;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        4px 5px 0 #eadcf6;
+
+    transition: 0.5s;
+}
+
+.hero h1:hover {
+    transform:
+        scale(1.05)
+        rotate(-2deg);
+
+    text-shadow:
+        7px 8px 0 #dcd0ef;
+}
+
+.hero h2 {
+    color: #9e86bc;
+
+    font-size: 29px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 690px;
+
+    margin: auto;
+
+    color: #716c80;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+   💗 HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 16px 32px;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    transition: 0.4s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.btn-primary {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d5b5e7,
+            #abbfe4
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(158, 132, 194, 0.3);
+}
+
+.btn-secondary {
+    color: #9075ad;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    border:
+        2px solid #d9c8eb;
+}
+
+.btn::before {
+    content: "🐾 ";
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform:
+        translateY(-7px)
+        scale(1.04);
+
+    box-shadow:
+        0 16px 32px
+        rgba(158, 132, 194, 0.28);
+}
+
+.btn:hover::before {
+    display: inline-block;
+
+    transform:
+        rotate(-20deg)
+        scale(1.3);
+}
+
+/* =========================================================
+   🌸 HERO MINI CARDS
+   ========================================================= */
+
+.hero-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    max-width: 750px;
+
+    margin: 45px auto 0;
+}
+
+.hero-card {
+    padding: 18px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.58);
+
+    border:
+        2px solid rgba(215, 201, 233, 0.8);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(150, 130, 190, 0.1);
+
+    transition: 0.4s;
+
+    animation:
+        cardFloat 4s ease-in-out infinite;
+}
+
+.hero-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.hero-card:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.hero-card:hover {
+    transform:
+        translateY(-10px)
+        rotate(2deg)
+        scale(1.04);
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 18px 35px
+        rgba(150, 130, 190, 0.17);
+}
+
+.hero-card .emoji {
+    font-size: 32px;
+
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.hero-card h3 {
+    color: #9175ad;
+
+    font-size: 18px;
+}
+
+.hero-card p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #777184;
+}
+
+/* =========================================================
+   🌷 SECTION
+   ========================================================= */
+
+.section {
+    padding: 105px 8%;
+
+    position: relative;
+}
+
+.section:nth-child(even) {
+    background:
+        linear-gradient(
+            135deg,
+            #fff1f8,
+            #f2edff,
+            #eaf7fa
+        );
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 44px;
+
+    margin-bottom: 55px;
+
+    color: #9175ae;
+
+    text-shadow:
+        2px 3px 0 #e8ddf7;
+
+    position: relative;
+}
+
+.section-title::before {
+    content: "🌸 ";
+
+}
+
+.section-title::after {
+    content: " 🎀";
+}
+
+/* =========================================================
+   🐼 ABOUT
+   ========================================================= */
+
+.about-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    border:
+        2px dashed #cbb9e6;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    color: #716b82;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(164, 143, 204, 0.12);
+
+    position: relative;
+
+    transition: 0.4s;
+}
+
+.about-content:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(164, 143, 204, 0.2);
+}
+
+.about-content::before {
+    content: "🐼";
+
+    position: absolute;
+
+    top: -30px;
+    left: 30px;
+
+    font-size: 46px;
+
+    animation:
+        pandaPeek 3s ease-in-out infinite;
+}
+
+.about-content::after {
+    content: "🐱";
+
+    position: absolute;
+
+    right: 30px;
+    bottom: -15px;
+
+    font-size: 40px;
+
+    animation:
+        catFloat 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   🌈 SKILLS
+   ========================================================= */
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(190px, 1fr)
+        );
+
+    gap: 28px;
+}
+
+.skill-card {
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    padding: 35px 22px;
+
+    text-align: center;
+
+    border:
+        2px solid #ddd1ef;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(164, 143, 204, 0.09);
+
+    transition: 0.4s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform:
+        translateY(-12px)
+        rotate(2deg);
+
+    border-color:
+        #c2acdF;
+
+    box-shadow:
+        0 20px 40px
+        rgba(164, 143, 204, 0.18);
+}
+
+.skill-card::before {
+    content: "💗";
+
+    position: absolute;
+
+    top: 10px;
+    right: 14px;
+
+    font-size: 22px;
+
+    transition: 0.4s;
+}
+
+.skill-card:hover::before {
+    transform:
+        scale(1.5)
+        rotate(15deg);
+}
+
+.skill-card::after {
+    content: "🐾";
+
+    display: block;
+
+    margin-top: 14px;
+
+    font-size: 25px;
+}
+
+.skill-card h3 {
+    color: #9175ae;
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+}
+
+.skill-card p {
+    color: #777086;
+
+    font-size: 16px;
+}
+
+/* =========================================================
+   🐱 PROJECTS
+   ========================================================= */
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(270px, 1fr)
+        );
+
+    gap: 30px;
+}
+
+.project-card {
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    padding: 35px;
+
+    border:
+        2px solid #dcd3ed;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 10px 28px
+        rgba(164, 143, 204, 0.1);
+
+    transition: 0.4s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform:
+        translateY(-13px)
+        rotate(-1deg);
+
+    border-color:
+        #bca6d8;
+
+    box-shadow:
+        0 22px 45px
+        rgba(164, 143, 204, 0.2);
+}
+
+.project-card::before {
+    content: "🐱";
+
+    position: absolute;
+
+    right: 18px;
+    top: 13px;
+
+    font-size: 30px;
+
+    transition: 0.5s;
+}
+
+.project-card:hover::before {
+    transform:
+        translate(-15px, 15px)
+        rotate(15deg)
+        scale(1.3);
+}
+
+.project-card::after {
+    content: "♡";
+
+    position: absolute;
+
+    right: 15px;
+    bottom: -30px;
+
+    font-size: 90px;
+
+    color: #eee6f8;
+
+    transition: 0.5s;
+}
+
+.project-card:hover::after {
+    bottom: -5px;
+
+    transform:
+        rotate(-12deg);
+}
+
+.project-card h3 {
+    color: #9072ac;
+
+    margin-bottom: 16px;
+
+    font-size: 23px;
+}
+
+.project-card p {
+    color: #726d80;
+
+    margin-bottom: 22px;
+
+    font-size: 17px;
+}
+
+.project-card span {
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6ddec,
+            #e4dcf6,
+            #dceff4
+        );
+
+    color: #78678e;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    margin: 3px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.project-card span:hover {
+    background:
+        #b9a2d4;
+
+    color: white;
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+}
+
+/* =========================================================
+   🏆 ACHIEVEMENTS
+   ========================================================= */
+
+.achievement-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 30px;
+}
+
+.achievement-card {
+    background:
+        rgba(255, 255, 255, 0.80);
+
+    padding: 35px;
+
+    border:
+        2px solid #ddd4ec;
+
+    border-radius: 28px;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 8px 25px
+        rgba(164, 143, 204, 0.08);
+
+    position: relative;
+}
+
+.achievement-card:hover {
+    transform:
+        translateY(-10px)
+        rotate(1deg);
+
+    border-color:
+        #bda6d8;
+
+    box-shadow:
+        0 20px 40px
+        rgba(164, 143, 204, 0.17);
+}
+
+.achievement-card::before {
+    content: "🐼";
+
+    position: absolute;
+
+    top: 13px;
+    right: 18px;
+
+    font-size: 30px;
+
+    transition: 0.4s;
+}
+
+.achievement-card:hover::before {
+    transform:
+        rotate(12deg)
+        scale(1.25);
+}
+
+.achievement-card h3 {
+    color: #9176ad;
+
+    margin-bottom: 16px;
+
+    font-size: 22px;
+}
+
+.achievement-card p {
+    font-size: 17px;
+}
+
+/* =========================================================
+   💌 CONTACT
+   ========================================================= */
+
+.contact {
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 50%,
+            #f5dcec 0%,
+            transparent 27%
+        ),
+
+        radial-gradient(
+            circle at 85% 50%,
+            #dcd8f5 0%,
+            transparent 27%
+        ),
+
+        #fffaff;
+}
+
+.contact p {
+    color: #726d80;
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+}
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: #87709f;
+
+    text-decoration: none;
+
+    border:
+        2px solid #d6c5e8;
+
+    padding: 13px 27px;
+
+    border-radius: 30px;
+
+    background: #fffaff;
+
+    font-size: 17px;
+
+    transition: 0.35s;
+}
+
+.contact-links a:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #d7bce8,
+            #bfcde9
+        );
+
+    color: white;
+
+    transform:
+        translateY(-5px)
+        rotate(-2deg);
+
+    box-shadow:
+        0 12px 25px
+        rgba(164, 143, 204, 0.25);
+}
+
+.contact-links a::before {
+    content: "💗 ";
+}
+
+/* =========================================================
+   🌙 FOOTER
+   ========================================================= */
+
+footer {
+    text-align: center;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9d88b8,
+            #8298bd
+        );
+
+    color: #fdf7ff;
+
+    font-size: 15px;
+}
+
+footer::before {
+    content:
+        "🐼  🦋  💗  🐱  ☁️  ✦  🌸";
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+}
+
+/* =========================================================
+   ✨ ANIMATIONS
+   ========================================================= */
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(45px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes pandaFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-4deg);
+    }
+
+    50% {
+        transform:
+            translateY(-20px)
+            rotate(4deg);
+    }
+}
+
+@keyframes pandaPeek {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-4deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(4deg);
+    }
+}
+
+@keyframes catFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(5deg);
+    }
+}
+
+@keyframes butterflyFly {
+
+    0% {
+        transform:
+            translate(0, 0)
+            rotate(-8deg);
+    }
+
+    25% {
+        transform:
+            translate(25px, -30px)
+            rotate(8deg);
+    }
+
+    50% {
+        transform:
+            translate(50px, 10px)
+            rotate(-5deg);
+    }
+
+    75% {
+        transform:
+            translate(25px, 35px)
+            rotate(8deg);
+    }
+
+    100% {
+        transform:
+            translate(0, 0)
+            rotate(-8deg);
+    }
+}
+
+@keyframes heartFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity: 0.6;
+    }
+
+    50% {
+        transform:
+            translateY(-30px)
+            scale(1.25);
+
+        opacity: 1;
+    }
+}
+
+@keyframes twinkle {
+
+    0%, 100% {
+        opacity: 0.3;
+
+        transform:
+            scale(0.7)
+            rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            scale(1.4)
+            rotate(25deg);
+    }
+}
+
+@keyframes cloudMove {
+
+    from {
+        transform:
+            translateX(-100px);
+    }
+
+    to {
+        transform:
+            translateX(120vw);
+    }
+}
+
+@keyframes moonFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(3deg);
+    }
+}
+
+@keyframes glowMove {
+
+    0%, 100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(30px, -25px)
+            scale(1.15);
+    }
+}
+
+@keyframes badgeFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-7px);
+    }
+}
+
+@keyframes cardFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-5px);
+    }
+}
+
+/* =========================================================
+   📱 TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    .nav-links {
+        gap: 13px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 90vh;
+
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-cards {
+        grid-template-columns:
+            1fr;
+
+        max-width: 350px;
+
+        margin-top: 30px;
+    }
+
+    .hero-card {
+        padding: 15px;
+    }
+
+    .moon {
+        width: 70px;
+        height: 70px;
+
+        right: 7%;
+        top: 9%;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .section-title {
+        font-size: 35px;
+    }
+
+    .decor {
+        display: none;
+    }
+}
+
+/* =========================================================
+   📱 MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        font-size: 12px;
+
+        gap: 8px;
+    }
+
+    .hero {
+        padding:
+            55px 6%
+            65px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+
+        padding:
+            8px 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .btn {
+        width: 85%;
+    }
+
+    .hero-cards {
+        width: 90%;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .about-content {
+        padding: 28px 20px;
+
+        font-size: 16px;
+    }
+
+    .skill-card,
+    .project-card,
+    .achievement-card {
+        padding: 25px;
+    }
+
+    .moon {
+        opacity: 0.5;
+    }
+}/* =========================================
+   🌸 CLICKABLE SKILL POPUP
+   ========================================= */
+
+.skill-card {
+    cursor: pointer;
+}
+
+/* Dark transparent background */
+
+.skill-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(70, 55, 90, 0.35);
+
+    backdrop-filter: blur(8px);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Popup box */
+
+.skill-popup {
+
+    width: 90%;
+    max-width: 650px;
+
+    max-height: 85vh;
+    overflow-y: auto;
+
+    background: linear-gradient(
+        135deg,
+        #fffaff,
+        #f8f0ff,
+        #eefaff
+    );
+
+    border: 3px solid #dfc9ed;
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(100, 80, 130, 0.3);
+
+    animation: popupAppear 0.4s ease;
+}
+
+
+/* Close button */
+
+.close-btn {
+
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f3d8ed;
+
+    color: #80658f;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+
+    transform: rotate(90deg) scale(1.1);
+
+    background: #d9bce8;
+
+    color: white;
+}
+
+
+/* Popup heading */
+
+.skill-popup h2 {
+
+    color: #9175ae;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Popup sections */
+
+.skill-popup h3 {
+
+    color: #a274a7;
+
+    margin-top: 22px;
+
+    margin-bottom: 8px;
+
+    font-size: 20px;
+
+}
+
+
+.skill-popup p {
+
+    color: #706a7d;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* List */
+
+.skill-popup ul {
+
+    padding-left: 25px;
+
+    color: #706a7d;
+
+}
+
+
+.skill-popup li {
+
+    margin-bottom: 8px;
+
+}
+
+
+/* Cute application boxes */
+
+.application-box {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    margin: 5px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f6ddec,
+        #e5ddf7
+    );
+
+    color: #776487;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.application-box:hover {
+
+    transform: translateY(-4px) scale(1.05);
+
+    background: #c7addd;
+
+    color: white;
+}
+
+
+/* Popup animation */
+
+@keyframes popupAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.75)
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .skill-popup {
+
+        padding: 30px 22px;
+
+    }
+
+    .skill-popup h2 {
+
+        font-size: 26px;
+
+    }
+
+}
